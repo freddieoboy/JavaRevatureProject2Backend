@@ -1,7 +1,12 @@
 package com.revature;
 
+import java.util.List;
+
 import org.hibernate.Session;
 
+import com.revature.dao.UserDao;
+import com.revature.dao.impl.UserDaoImpl;
+import com.revature.model.User;
 import com.revature.util.HibernateUtil;
 
 public class Driver {
@@ -9,6 +14,33 @@ public class Driver {
 	public static void main(String[] args) {
 		
 		Session s = HibernateUtil.getSession();
+		
+		UserDao ud = new UserDaoImpl();
+		
+		List<User> users = ud.getUsers();
+		
+		for (User u: users) {
+			System.out.println(u);
+		}
+		
+		User u1 = ud.getUserById(1);
+		
+		u1 = ud.getUserByEmailAndPassword("larno0@discuz.net", "pswd");
+		
+		//u1 = ud.getUserByUsernameAndPassword("osurgey6@wikispaces.com", "pswd");
+		
+		u1 = ud.getUserByUsernameAndPassword("osurgey6", "pswd");
+		System.out.println(u1);
+		
+		User u2 = new User();
+		int i = 2;
+		u2.setEmail("test" + i + "@test.com");
+		u2.setFirstname("test" + i );
+		u2.setLastname("test" + i );
+		u2.setPassword("pswd");
+		u2.setUsername("test" + i );
+		
+		System.out.println("PK: " + ud.createUser(u2));
 
 		//CaveDao cd = new CaveDaoImpl();
 		

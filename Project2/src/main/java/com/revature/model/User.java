@@ -33,7 +33,7 @@ public class User implements Serializable {
 	@Column(name="last_name")
 	String lastname;
 	
-	@Column(name="user_name", unique = true, nullable = false)
+	@Column(name="username", unique = true, nullable = false)
 	String username;
 	
 	@Column(name="email", unique = true, nullable = false)
@@ -62,6 +62,19 @@ public class User implements Serializable {
 	
 	public User(int id) {
 		this.userId = id;
+	}
+	
+	public User(String firstname, String lastname, String username, String email, String password,
+			Timestamp lastLogin, boolean isPrivate) {
+		super();
+		
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.lastLogin = lastLogin;
+		this.isPrivate = isPrivate;
 	}
 
 	public User(int userId, String firstname, String lastname, String username, String email, String password,

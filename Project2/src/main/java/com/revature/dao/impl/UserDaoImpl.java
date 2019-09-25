@@ -61,7 +61,8 @@ public class UserDaoImpl implements UserDao {
 			
 			
 			Query<User> query = s.createQuery(cq);
-			User u = query.getSingleResult();
+			//System.out.println(query);
+			User u = query.uniqueResult();
 			log.info("getting user by email and password");
 			return u;
 		}
@@ -77,7 +78,7 @@ public class UserDaoImpl implements UserDao {
 			cq.select(root);
 			cq.where(
 					cb.and(
-							cb.equal(root.get("user_id"), u),
+							cb.equal(root.get("username"), u),
 							cb.equal(root.get("password"), p)
 							)
 					
@@ -85,8 +86,8 @@ public class UserDaoImpl implements UserDao {
 			
 			
 			Query<User> query = s.createQuery(cq);
-			User user = query.getSingleResult();
-			log.info("getting user by email and password");
+			User user = query.uniqueResult();
+			log.info("getting user by username and password");
 			return user;
 		}
 	}
