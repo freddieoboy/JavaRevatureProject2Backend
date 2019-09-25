@@ -10,16 +10,16 @@ join proj2.song s on s.playlist_id = p.playlist_id
 
 
 
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (1, 'Louie', 'Arno', 'larno0@discuz.net', 'larno0', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (2, 'Klement', 'Wrathall', 'kwrathall1@booking.com', 'kwrathall1', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (3, 'Hermina', 'Gladden', 'hgladden2@cloudflare.com', 'hgladden2', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (4, 'Margaretta', 'Burril', 'mburril3@posterous.com', 'mburril3', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (5, 'Rene', 'Beggs', 'rbeggs4@phoca.cz', 'rbeggs4', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (6, 'Amie', 'Freebury', 'afreebury5@ebay.com', 'afreebury5', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (7, 'Otha', 'Surgey', 'osurgey6@wikispaces.com', 'osurgey6', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (8, 'Skyler', 'Procter', 'sprocter7@xing.com', 'sprocter7', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (9, 'Christan', 'Emanson', 'cemanson8@shinystat.com', 'cemanson8', 'pswd', 'false');
-insert into proj2.user (user_id, first_name, last_name, email, user_name, password, is_private) values (10, 'Gene', 'Dudson', 'gdudson9@hubpages.com', 'gdudson9', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (1, 'Louie', 'Arno', 'larno0@discuz.net', 'larno0', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (2, 'Klement', 'Wrathall', 'kwrathall1@booking.com', 'kwrathall1', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (3, 'Hermina', 'Gladden', 'hgladden2@cloudflare.com', 'hgladden2', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (4, 'Margaretta', 'Burril', 'mburril3@posterous.com', 'mburril3', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (5, 'Rene', 'Beggs', 'rbeggs4@phoca.cz', 'rbeggs4', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (6, 'Amie', 'Freebury', 'afreebury5@ebay.com', 'afreebury5', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (7, 'Otha', 'Surgey', 'osurgey6@wikispaces.com', 'osurgey6', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (8, 'Skyler', 'Procter', 'sprocter7@xing.com', 'sprocter7', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (9, 'Christan', 'Emanson', 'cemanson8@shinystat.com', 'cemanson8', 'pswd', 'false');
+insert into proj2.user (user_id, first_name, last_name, email, username, password, is_private) values (10, 'Gene', 'Dudson', 'gdudson9@hubpages.com', 'gdudson9', 'pswd', 'false');
 
 insert into proj2.playlist (playlist_id, name, is_private) values (1, 'Sub-Ex', 'false');
 insert into proj2.playlist (playlist_id, name, is_private) values (2, 'Bitchip', 'false');
