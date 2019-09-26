@@ -41,10 +41,12 @@ public class PlaylistServiceImpl implements PlaylistService {
 		return h;
 	}
 
+	
 	@Override
-	public List<Playlist> findPlaylistsByUser(User u) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Playlist> findPlaylistsByUserId(Integer id) {
+		return pr.findPlaylistsByUser(new User(id));
 	}
+
+	
 	
 }

@@ -26,13 +26,18 @@ public class PlaylistController {
 
 	@GetMapping
 	public List<Playlist> getAll() {
-
 		return ps.findAllPlaylists();
 	}
+	
 
 	@GetMapping("/{id}")
 	public Playlist getPlaylistById(@PathVariable("id") Integer id) {
 		return ps.findPlaylistById(id);
+	}
+	
+	@GetMapping("/users/{id}")
+	public List<Playlist> getPlaylistsByUserId(@PathVariable("id") Integer id) {
+		return ps.findPlaylistsByUserId(id);
 	}
 
 	@PostMapping

@@ -35,7 +35,17 @@ public class SongController {
 		public Song getSongById(@PathVariable("id") Integer id) {
 			return ss.findSongById(id);
 		}
-
+		
+		@GetMapping("playlists/{id}")
+		public List<Song> getSongsByPlaylistId(@PathVariable("id") Integer id) {
+			return ss.findSongsByPlaylistId(id);
+		}
+		
+		@GetMapping("playlists/users/{id}")
+		public List<Song> getSongsByPlaylistIdByUserId(@PathVariable("id") Integer id) {
+			return ss.findSongsByPlaylistByUserId(id);
+		}
+		
 		@PostMapping
 		public ResponseEntity<Song> addSong(@RequestBody Song Song) {
 			ss.addSong(Song);

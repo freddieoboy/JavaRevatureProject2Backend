@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.revature.models.Playlist;
 import com.revature.models.Song;
+import com.revature.models.User;
 import com.revature.repositories.SongRepository;
 
 @Service
@@ -42,9 +43,13 @@ public class SongServiceImpl implements SongService {
 	}
 
 	@Override
-	public List<Song> findSongsByPlaylist(Playlist playlist) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Song> findSongsByPlaylistId(Integer id) {
+		return sr.findSongsByPlaylist(new Playlist(id));
+	}
+
+	@Override
+	public List<Song> findSongsByPlaylistByUserId(Integer id) {
+		return sr.findSongsByPlaylistUser(new User(id));
 	}
 	
 }
