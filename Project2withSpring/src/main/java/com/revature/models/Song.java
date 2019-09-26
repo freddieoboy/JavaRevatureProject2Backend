@@ -34,6 +34,10 @@ public class Song implements Serializable {
 	public Song() {
 		super();
 	}
+	
+	public Song(Integer id) {
+		super();
+	}
 
 	public Song(Integer songId, Playlist playlist, String spotifySongId) {
 		super();

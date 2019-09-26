@@ -47,6 +47,11 @@ public class User implements Serializable {
 	public User() {
 		super();
 	}
+	
+	public User(Integer id) {
+		super();
+		this.userId = id;
+	}
 
 	public User(Integer userId, String firstname, String lastname, String username, String email, String password) {
 		super();

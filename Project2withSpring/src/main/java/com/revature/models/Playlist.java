@@ -33,6 +33,11 @@ public class Playlist implements Serializable {
 	public Playlist() {
 		super();
 	}
+	
+	public Playlist(Integer id) {
+		super();
+		this.playlistId = id;
+	}
 
 	public Playlist(Integer playlistId, User user, String name) {
 		super();
