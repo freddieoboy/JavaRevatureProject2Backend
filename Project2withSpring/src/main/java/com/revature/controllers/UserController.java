@@ -32,6 +32,7 @@ public class UserController {
 	
 	@GetMapping("/{id}")
 	public User getUserById(@PathVariable("id")Integer id) {
+		System.out.println("THIS IS MY ID: "+id);
 		return us.findUserById(id);
 	}
 	

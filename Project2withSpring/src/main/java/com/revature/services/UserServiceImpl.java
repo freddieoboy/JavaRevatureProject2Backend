@@ -42,14 +42,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User findUserByUsernameAndPassword(String u, String p) {
-		// TODO Auto-generated method stub
-		return null;
+		return ur.findUserByUsernameAndPassword(u, p);
 	}
 
 	@Override
 	public User findUserByEmailAndPassword(String e, String p) {
-		// TODO Auto-generated method stub
-		return null;
+		return ur.findUserByEmailAndPassword(e, p);
 	}
 	
 }
