@@ -46,6 +46,12 @@ public class Song implements Serializable {
 		this.spotifySongId = spotifySongId;
 	}
 
+	public Song(String spotifySongId, Playlist playlist) {
+		super();
+		this.playlist = playlist;
+		this.spotifySongId = spotifySongId;
+	}
+
 	@Override
 	public String toString() {
 		return "Song [songId=" + songId + ", playlist=" + playlist + ", spotifySongId=" + spotifySongId + "]";

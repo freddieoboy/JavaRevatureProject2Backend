@@ -32,8 +32,14 @@ public class UserController {
 	
 	@GetMapping("/{id}")
 	public User getUserById(@PathVariable("id")Integer id) {
-		System.out.println("THIS IS MY ID: "+id);
+		//System.out.println("THIS IS MY ID: "+id);
 		return us.findUserById(id);
+	}
+	
+	@GetMapping("/{userid}/playlists")
+	public User getAllPlayslistUserById(@PathVariable("userid")Integer userid) {
+		//System.out.println("THIS IS MY ID: "+id);
+		return us.findAllPlaylistsByUserById(userid);
 	}
 	
 	@PostMapping

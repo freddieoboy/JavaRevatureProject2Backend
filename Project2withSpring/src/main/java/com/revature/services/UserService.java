@@ -8,6 +8,7 @@ public interface UserService {
 
 	public List<User> findAllUsers();
 	public User findUserById(Integer id);
+	public User findAllPlaylistsByUserById(Integer id);
 	public User findUserByUsernameAndPassword(String u, String p);
 	public User findUserByEmailAndPassword(String e, String p);
 	public User addUser(User u);

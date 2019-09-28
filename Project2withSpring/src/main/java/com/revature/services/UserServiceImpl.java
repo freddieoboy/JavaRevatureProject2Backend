@@ -25,6 +25,16 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public User findAllPlaylistsByUserById(Integer id) {
+		return ur.findAllPlaylistsByUserId(id);
+	}
+	/*
+	 * public List<Song> findSongsByPlaylistId(Integer id) {
+		return sr.findSongsByPlaylist(new Playlist(id));
+	}
+	 */
+	
+	@Override
 	public User addUser(User h) {
 		return ur.save(h);
 	}
@@ -49,5 +59,7 @@ public class UserServiceImpl implements UserService {
 	public User findUserByEmailAndPassword(String e, String p) {
 		return ur.findUserByEmailAndPassword(e, p);
 	}
+
+	
 	
 }

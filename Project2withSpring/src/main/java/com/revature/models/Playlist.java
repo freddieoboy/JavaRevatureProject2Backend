@@ -46,6 +46,12 @@ public class Playlist implements Serializable {
 		this.name = name;
 	}
 
+	public Playlist(String playlistName, User user) {
+		super();
+		this.name = playlistName;
+		this.user = user;
+	}
+
 	@Override
 	public String toString() {
 		return "Playlist [playlistId=" + playlistId + ", user=" + user + ", name=" + name + "]";
